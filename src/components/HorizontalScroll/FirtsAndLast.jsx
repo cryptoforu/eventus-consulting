@@ -45,7 +45,7 @@ const FirstAndLast = (props) => {
                 <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                   <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                     {first ? (
-                      <span className="text-gray-600">
+                      <span className="text-gray-600 dark:text-slate-300">
                         Naš Portofolio.{" "}
                         <Link to="/" className="font-semibold text-indigo-600">
                           <span
@@ -56,7 +56,7 @@ const FirstAndLast = (props) => {
                         </Link>
                       </span>
                     ) : (
-                      <span className="text-gray-600">
+                      <span className="text-gray-600 dark:text-slate-300">
                         Ovo nije kraj.{" "}
                         <Link to="/" className="font-semibold text-indigo-600">
                           <span
@@ -80,7 +80,7 @@ const FirstAndLast = (props) => {
                   >
                     {first ? "Neki od naših radova." : "Ovo nije sve."}
                   </Heading>
-                  <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
+                  <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-300 sm:text-center">
                     {first
                       ? "Bilo da se radi o front-end razvoju, integraciji CMS-a ili potpunoj back-end podršci - imamo rješenje za vas. Osigurat ćemo vam brzu i pametnu stranicu koja je optimizirana za vaše posjetitelje."
                       : "Brinemo o detaljima tako da vi ne morate. Kada radite sa našom agencijom, možete biti sigurni da vaša web stranica ispunjava sve standarde modernog web dizajna i razvoja."}

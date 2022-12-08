@@ -12,8 +12,8 @@ import {
 export function InstaCon() {
   return (
     <Container className="mt-20">
-      <div className="grid grid-cols-12 items-center gap-8">
-        <div className="relative z-10 order-last col-span-6 space-y-6">
+      <div className="grid md:grid-cols-12 items-center gap-8">
+        <div className="hidden md:block relative z-10 order-last md:col-span-6 space-y-6">
           <div className="relative py-16">
             <Heading
               headingLevel="h2"
@@ -46,7 +46,7 @@ export function InstaCon() {
             </div>
           </div>
         </div>
-        <div className="relative col-span-6">
+        <div className="relative md:col-span-6">
           <div className="z-10 mx-auto w-full max-h-fit">
             <SocialCard className={"relative"}>
               <SocialCard.Header messageCount="4" />

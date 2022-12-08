@@ -5,8 +5,8 @@ import { Heading, Prose, Button, Container } from "../Elements/Index";
 export function MobileRes() {
   return (
     <Container className="mt-20">
-      <div className="grid grid-cols-12 items-center gap-8">
-        <div className="relative z-10 order-2 col-span-4 space-y-6">
+      <div className="grid md:grid-cols-12 items-center gap-8">
+        <div className="relative z-10 order-2 md:col-span-4 space-y-6">
           <div className="relative py-16">
             <Heading
               headingLevel="h2"
@@ -42,7 +42,7 @@ export function MobileRes() {
             </div>
           </div>
         </div>
-        <div className="relative order-1 col-span-3">
+        <div className="hidden md:block relative order-1 md:col-span-3">
           <div className="z-10 mx-auto w-full max-w-[300px]">
             <StaticImage
               className="max-w-full h-auto"
@@ -51,7 +51,7 @@ export function MobileRes() {
             />
           </div>
         </div>
-        <div className="relative order-3 col-span-5">
+        <div className="relative order-3 md:col-span-5">
           <div className="z-10 mx-auto w-full">
             <StaticImage
               className="max-w-full h-auto"

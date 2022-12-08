@@ -47,7 +47,7 @@ const HomeForm = () => {
             placeholder="Email"
           />
           <div className="pt-1">
-            <Button variant="rounded" color="gray" type="submit" className='w-full'>
+            <Button variant="rounded" color="gradPurple" type="submit" className='w-full'>
               Kontaktiraj
             </Button>
           </div>

@@ -121,7 +121,7 @@ SocialCard.StoryHead = forwardRef(function SocialCardStoryHead(
             </span>
           </Button>
 
-          <span className="text-sm font-medium">econsult</span>
+          <span className="text-sm font-medium text-slate-800 dark:text-slate-100">econsult</span>
         </li>
         {notDefault ? children : defaultStory.map((story, i) => (
           <SocialCard.Story key={i} storyImage={story.storyImage} storyText={story.storyText}/>
@@ -154,7 +154,7 @@ SocialCard.Story = forwardRef(function SocialCardStory(
       </div>
 
       {/* Story Text  */}
-      <span className="story-text font-medium">{storyText}</span>
+      <span className="story-text font-medium text-slate-800 dark:text-slate-100">{storyText}</span>
     </li>
   );
 });
@@ -198,7 +198,7 @@ SocialCard.Navigation = forwardRef(function SocialCardNavigation(
 ) {
   return (
     <div ref={ref} className={clsx("absolute bottom-0 left-0 w-full", className)}>
-      <div className="px-7  bg-white shadow-lg rounded-2xl">
+      <div className="px-7  bg-white dark:bg-black shadow-lg rounded-2xl">
         <div className="flex flex-row items-center justify-center space-x-3">
           {/* Item #1  */}
           <div className="flex group">

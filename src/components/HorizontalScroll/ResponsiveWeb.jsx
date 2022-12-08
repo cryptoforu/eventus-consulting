@@ -8,7 +8,7 @@ const ResponsiveWeb = () => {
   return {
     content: (
       <div>
-        <ul className="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-x-4 gap-y-8 lg:mx-0 lg:justify-start">
+        <ul className="hidden md:flex mx-auto mt-8  max-w-xl flex-wrap justify-center gap-x-4 lg:mx-0 lg:justify-start">
           {frameworks.map(({ node }, i) => (
             <Link
               to={node.link}

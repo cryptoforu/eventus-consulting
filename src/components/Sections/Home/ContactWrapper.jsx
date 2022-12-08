@@ -30,9 +30,9 @@ const ContactWrapper = () => {
         className="w-full mx-auto max-w-5xl py-16 text-center space-y-4"
         ref={refHeading}
       >
-        <motion.span
+        <motion.span className="flex flex-col mb-4"
           variants={itemVariant}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          transition={{ ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 }}
         >
           <GradientText className={"text-3xl"}>
             Kafa je na nas racun

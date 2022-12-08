@@ -10,7 +10,7 @@ const Accordion = ({ i, expanded, setExpanded, children, buttonLabel }) => {
         variant={isOpen ? 'solid' : 'outline'}
         color={isOpen ? 'gradPurple' : 'gray'}
         onPress={setExpanded}
-        className={clsx('text-lg font-semibold mb-2', {'text-white': isOpen, 'text-slate-800': !isOpen})}
+        className={clsx('text-lg font-semibold mb-2', {'text-white': isOpen, 'text-slate-800 dark:text-slate-200': !isOpen})}
       >
         {buttonLabel}
       </Button>

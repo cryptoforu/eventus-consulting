@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import clsx from "clsx";
 import { useHover } from "react-aria";
 import { useNavbarStore } from "../../../store/main";
@@ -38,7 +38,12 @@ const MainNav = ({isHomepage, }) => {
       window.removeEventListener("scroll", onScroll);
     };
   }, [dispatch]);
-
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
   return (
     <header
       className={clsx(
@@ -50,8 +55,9 @@ const MainNav = ({isHomepage, }) => {
         }
       )}
     >
+      <motion.div className="absolute bottom-0 inset-x-0 bg-gradient-to-r from-cyan-500 to-blue-500 origin-[0%] h-1" style={{scaleX}}/>
       <nav>
-        <Container className="relative z-50 flex justify-between py-4">
+        <Container className="relative z-50 flex justify-between py-4 px-4">
           <div className="relative z-10 flex items-center gap-16">
             <Link to="/" aria-label="Home">
               <Logo className="h-10 w-auto" />
