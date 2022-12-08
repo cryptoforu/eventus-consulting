@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Mujanic",
+        "logo": "../images/partneri/mujanic-logo_cp.png",
+        "link": "http://mujanic.ba/"
+    },
+    {
+        "title": "MDA Guma",
+        "logo": "../images/partneri/mda-logo_cp.png",
+        "link": "https://mdaguma.ba/"
+    },
+    {
+        "title": "Ford",
+        "logo": "../images/partneri/ford-logo_cp.png",
+        "link": "https://www.ford.ba/"
+    },
+    {
+        "title": "Kommpet",
+        "logo": "../images/partneri/kompete_cp.png",
+        "link": "https://www.facebook.com/pages/category/Secretarial-Service/Kommpet-doo-101940991410176/"
+    },
+    {
+        "title": "Sarajevo Osiguranje",
+        "logo": "../images/partneri/sao-logo_cp.png",
+        "link": "https://www.sarajevoosiguranje.ba/"
+    },
+    {
+        "title": "Corto",
+        "logo": "../images/partneri/corto-logo_cp.png",
+        "link": "http://corto.ba/"
+    },
+    {
+        "title": "Power d.o.o Sarajevo",
+        "logo": "../images/partneri/power-logo_cp.png",
+        "link": "http://www.power.ba/"
+    },
+    {
+        "title": "FL Direkt Marketing",
+        "logo": "../images/partneri/fldm-logo_cp.png",
+        "link": "https://www.facebook.com/fldirektmarketing/"
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Responsivni Web Dizajn",
+        "desc": "Svi naši dizajni napravljeni su s korisnikom na umu, sa elegantnim, modernim izgledom, intuitivnim karakteristikama i funkcionalnošću",
+        "image": "../images/illustrations/webp/website-design.webp",
+        "alt": "Razvoj modernih, responsivni web stranica",
+        "link": "#"
+    },
+    {
+        "title": "Razvoj Web Aplikacija",
+        "desc": "Razvijamo jedinstvene web aplikacije koje su prilagođene vašim individualnim potrebama koristeći najbolje javascript alate",
+        "image": "../images/illustrations/webp/app.webp",
+        "alt": "razvoj modernih web aplikacija",
+        "link": "#"
+    },
+    {
+        "title": "Google Ads",
+        "desc": "Uz Google Ads, vaše digitalno oglašavanje se pojavljuje na Googleu tačno u trenutku kada neko traži proizvod ili uslugu poput vaše",
+        "image": "../images/illustrations/webp/google-ads.webp",
+        "alt": "google oglasavanje",
+        "link": "#"
+    },
+    {
+        "title": "Drustvene Mreze",
+        "desc": "Kreiramo strategiju za web i društvene mreže. Digitalizujemo preduzeće na način da virtualizacija prati stvarne potrebe preduzeća",
+        "image": "../images/illustrations/webp/development.webp",
+        "alt": "oglasite se na drustvenim mrezama",
+        "link": "#"
+    },
+    {
+        "title": "Vizuelni identitet Kompanije",
+        "desc": "Snimanje dronom će podići vašu online prezentaciju na novi nivo.  Kroz foto i video sesije, stvaramo vizualni identitet vaše kompanije",
+        "image": "../images/illustrations/webp/graphic.webp",
+        "alt": "vizuelni identitet kompanije",
+        "link": "#"
+    },
+    {
+        "title": "Komunikacija sa kupcima",
+        "desc": "Preuzimamo cjelokupnu komunikaciju sa klijentima online. Kroz personalizirani pristup kupcima, osnažujemo vaš brend i poslovni kredibilitet",
+        "image": "../images/illustrations/webp/hi.webp",
+        "alt": "komunikacija sa kupcima",
+        "link": "#"
+    }
+]

@@ -1,0 +1,78 @@
+---
+title: 'Kako rade pretraživači?'
+description: 'Za mnoge, Google je Internet. Predstavlja početnu tačku za pronalazak novih stranica, i bez sumnje je jedno od najvažnijih izuma otkako Internet postoji. Bez web pretraživača, svježi web sadržaj bi bio nedostupan masama.'
+tags: ['razvoj web aplikacija', 'seo', 'google optimizacija', 'pretrazivaci']
+category: 'seo'
+category_image: './imgs/seo_optimizacija.jpg'
+featured_img: './imgs/pretrazivaci.jpg'  
+---
+
+<PostContainer>
+<Container>
+<Prose>
+
+<PostHeadCategory image={props.data.mdx.frontmatter.category_image} alt={props.data.mdx.frontmatter.category} title={props.data.mdx.frontmatter.category} time={props.data.mdx.fields.timeToRead.minutes} />
+
+Za mnoge, Google je Internet. Predstavlja početnu tačku za pronalazak novih stranica, i bez sumnje je jedno od najvažnijih izuma otkako Internet postoji. Bez web pretraživača, svježi web sadržaj bi bio nedostupan masama.
+
+Ali da li znate kako web pretraživači rade? Svaki web pretraživač ima tri glavne funkcije: puzanje (crawling) – otkrivanje sadržaja; indeksiranje (indexing) – praćenje i skladištenje sadržaja; i vraćanje (retrieving) – prikupljanje relevatnog sadržaja prilikom upita korisnika web pretraživaču.
+
+![internet pretraživači 2022](./imgs/pretrazivaci.jpg)
+
+<Heading headingLevel='h2'>Puzanje</Heading>
+
+Puzanje je aktivnost gdje sve započinje: akvizicija podataka koji se tiču datog web sajta.
+
+Ovo uključuje skeniranje sajta i sakupljanje detalja u vezi svake stranice: naslovi, slike, ključne riječi, ostale linkovane stranice, itd. Različiti puzavci (crawleri)  također mogu tražiti različite detalje poput izgleda stranice, gdje su reklame postavljene, da li su linkovi zaglavljeni itd.
+
+Ali kako je web sajt ispuzan? Automatizirani bot (koji je nazvan pauk) posjećuje stranicu za stranicom što je brže moguće, koristeći stranične linkove kako bi pronašao gdje da ide dalje. Čak i u najranijim danima Googleovi pauci su mogli čitati nekoliko stotina stranica u sekundi. Sada, brojke slove na hiljade.
+
+Kada web crawler posjeti stranicu, on sakuplja svaki link na stranici i dodaje ih na svoju listu sljedeće stranice koju posjeti. Odlazi na sljedeću stranicu na svojoj listi, sakuplja linkove na toj stranici, i ponavlja. S vremena na vrijeme, web crawleri ponovo posjećuju stranice koje je obradio kako bi utvrdio da li su se desile bilo kakve promjene.
+
+Ovo znači da će svaka stranica koja je linkovana od index stranice eventualno biti ispuzana. Neke stranice su frekventnije puzane, dok za neke crawleri idu u dubinu, iako puzavci ponekad mogu odustati ako je hijerarhija stranice suviše kompleksna.
+
+Jedan od efikasnijih načina da shvatite kako web crawler radi je da napravite jedan. 
+
+<Heading headingLevel='h2'>Indeksiranje</Heading>
+
+Indeksiranje je kada podaci koji su ispuzani dalje procesirani i plasirani u bazu podataka.
+
+Zamislite da ste napravili listu svih knjiga koje posjedujete, njihove izdavače, autore, žanrove, broj stranica, itd. Puzanje je kada kombinujete kroz svaku knjigu, dok je indeksiranje momenat kada ih logujete u svoju listu.
+
+Sada zamislite da to nije samo soba puna knjiga, nego svaka biblioteka na svijetu. To je mala stvar u odnosu na ono što Google radi – smješta sve svoje podatke u velike centre podataka sa kapacitetom od više hiljada petabajta samo u drajvovima.
+
+Evo jedan sneak-peak na Googleove centre sa podacima:
+
+<Heading headingLevel='h3'>Vraćanje i rangiranje</Heading>
+
+Vraćanje je kada pretraživač procesira upit za pretragu i vrati najrelevantnije stranice koje se poklapaju sa upitom.
+
+Većina pretraživača se razlikuju u smislu metoda vraćanja: koriste različite kriterije da izaberu koje stranice najbolje odgovaraju onom što želite pronaći. Zato rezultati pretraga variraju između Googlea i Binga.
+
+Rangirni algoritmi provjeravaju upit pretrage u odnosu na milijarde stranica kako bi utvrdio relevantnost svake. Kompanije čuvaju svoje rangirne algoritme kao patentirane industrijske tajne zbog kompleksnosti tih algoritama. Bolji algoritam se prevodi u bolje iskustvo pretrage.
+
+Oni također ne žele da kreatori weba izigraju sistem i nepravedno se popenju na vrh rezultata pretrage. Ako interna metodologija pretraživača ikada izađe na vidjelo, svakorazni ljudi bi naravno eksploatisali to znanje da nanesu štetu surferima poput tebe i mene.
+
+Eksploatacija pretraživača je moguća, ali nije više jednostavna za izvesti.
+
+Originalno, pretraživači su rangirali sajtove na osnovu toga koliko često se ključna riječ pojavljivala na stranici, što vodi „nagomilavanju ključnih riječi“ – punjenje stranica ključnim riječima koje su besmislene.
+
+Onda se pojavio koncept važnosti linka: pretraživači su vrednovali stranice sa dosta dolazećih linkova zato što su popularnost stranice interpretirali kao relevantnu. Ali ovo je dovelo do spamovanja linkova diljem weba. Danas, pretraživači vagaju linkove ovisno od „autoriteta“ povezanog sajta. Pretraživači više vrednuju linkove od vladinih agencija nego linkove iz direktorija linkova.
+
+Danas, rangirni algoritmi su umotani u veo misterije više nego ikad prije, i „search engine optimization“ nije toliko važan. Dobra rangiranja pretraživača sada dolaze od visoko-kvalitetnog sadržaja i odličnog iskustva korisnika.    
+
+<Heading headingLevel='h3'>Šta je sljedeće za pretraživače?</Heading>
+
+To je vrlo interesantno pitanje. Odgovor je semantika: značenje sadržaja stranice.
+
+A evo i suštine.
+
+Sada možete pretraživati „kolači bez glutena“ ali rezultati mogu vratiti recepte za kolače bez glutena. Umjesto toga, možete pronaći recept za kolač koji kaže „Ovaj recept nije oslobođen glutena.“ Ima prave ključne riječi, ali i pogrešno značenje.
+
+Sa semantikom, možete pretraživati recepte za kolače i onda ukloniti određene sastojke: brašno, lješnik, itd. Također možete suziti rezultate na one recepte čije priprema traje manje od 30 minuta i pregledati izvještaje koji imaju 4 od 5 zvjezdica. To bi bilo cool, zar ne? I to je gdje pretraživači, zajedno sa nama, idu!
+
+<PostTags tags={props.data.mdx.frontmatter.tags}/>
+
+</Prose>
+</Container>
+</PostContainer>    

@@ -1,0 +1,32 @@
+[
+    {
+        "label": "React",
+        "logo": "../images/dev/react_500.png",
+        "link": "https://reactjs.org/"
+    },
+    {
+        "label": "Laravel",
+        "logo": "../images/dev/laravel_500.png",
+        "link": "https://laravel.com/"
+    },
+    {
+        "label": "Gatsby",
+        "logo": "../images/dev/gatsby_500.png",
+        "link": "https://www.gatsbyjs.com/"
+    },
+    {
+        "label": "Next.js",
+        "logo": "../images/dev/next_500.png",
+        "link": "https://nextjs.org/"
+    },
+    {
+        "label": "Tailwindcss",
+        "logo": "../images/dev/tailwind_500.png",
+        "link": "https://tailwindcss.com/"
+    },
+    {
+        "label": "Wordpress",
+        "logo": "../images/dev/wordpress_500.png",
+        "link": "https://wordpress.com/"
+    }
+]
