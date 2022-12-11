@@ -16,7 +16,7 @@ export function Prose({ as: Component = 'div', variant='xl', className, ...props
         'prose-headings:font-display prose-headings:font-bold prose-h2:text-5xl prose-headings:text-slate-800 dark:prose-headings:text-slate-200',
        
         // paragraph
-        'prose-p:text-slate-700 prose-p:dark:text-slate-300', 
+        'prose-p:text-slate-700 prose-p:dark:text-slate-300 prose-p:tracking-tight', 
         // lead
         'prose-lead:bg-clip-text prose-lead:text-transparent prose-lead:bg-gradient-to-r prose-lead:from-blue-600 prose-lead:via-indigo-700 prose-lead:to-blue-600 prose-lead:dark:bg-gradient-to-r prose-lead:dark:from-indigo-200 prose-lead:dark:via-sky-400 prose-lead:dark:to-indigo-200',
         // links

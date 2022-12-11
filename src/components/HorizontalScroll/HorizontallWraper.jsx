@@ -4,9 +4,8 @@ import { Section } from "../Elements/Index";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const HorizontallWraper = ({ children }) => {
+  gsap.registerPlugin(ScrollTrigger);
   const panels = useRef([]);
   const panelsContainer = useRef();
 
@@ -15,16 +14,17 @@ const HorizontallWraper = ({ children }) => {
   };
 
   useLayoutEffect(() => {
-    let maxWidth = 0;
-    const getMaxWidth = () => {
-      maxWidth = 0;
-      panels.current.forEach((section) => {
-        maxWidth += section.offsetWidth;
-      });
-    };
-    getMaxWidth();
-    ScrollTrigger.addEventListener("refreshInit", getMaxWidth);
+   
+
     setTimeout(() => {
+      let maxWidth = 0;
+      const getMaxWidth = () => {
+        maxWidth = 0;
+        panels.current.forEach((section) => {
+          maxWidth += section.offsetWidth;
+        });
+      };
+      getMaxWidth();
       gsap.to(panels.current, {
         x: () => `-${maxWidth - window.innerWidth}`,
         ease: "none",
@@ -32,49 +32,55 @@ const HorizontallWraper = ({ children }) => {
         scrollTrigger: {
           trigger: panelsContainer.current,
           pin: true,
-          scrub: true,
-          end: () => `+=${maxWidth}`,
+          scrub: 1,
+          end: () => `+=${maxWidth} + 20%`,
           invalidateOnRefresh: true,
         },
       });
-    }, 500);
 
-    panels.current.forEach((sct, i) => {
-      let tween = gsap.from(sct, {
-        opacity: 0,
-        scale: 0.6,
-        duration: 1,
-        force3D: true,
-        paused: true,
+      panels.current.forEach((sct, i) => {
+        let tween = gsap.from(sct, {
+          opacity: 0,
+          scale: 0.6,
+          duration: 1,
+          force3D: true,
+          
+          scrollTrigger: {
+            trigger: sct,
+            
+            start: () =>
+              "top top-=" +
+              (sct.offsetLeft - window.innerWidth / 2) *
+                (maxWidth / (maxWidth - window.innerWidth)),
+            end: () =>
+              "+=" +
+              sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
+              onEnter: () => tween.play(),
+              onLeave: () => tween.reverse(),
+              onEnterBack: () => tween.play(),
+              onLeaveBack: () => tween.reverse(),
+            
+          },
+        });
+        i || tween.progress(1);
       });
-      ScrollTrigger.create({
-        trigger: sct,
-        start: () =>
-          "top top-=" +
-          (sct.offsetLeft - window.innerWidth / 2) *
-            (maxWidth / (maxWidth - window.innerWidth)),
-        end: () =>
-          "+=" +
-          sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
-        toggleClass: { targets: sct, className: "active" },
-        onEnter: () => tween.play(),
-        onLeave: () => tween.reverse(),
-        onEnterBack: () => tween.play(),
-        onLeaveBack: () => tween.reverse(),
-      });
-    });
+    }, 500);
+    ScrollTrigger.refresh()
   }, []);
 
   return (
     <Section id="horizontal-scroll" ariaLabel="Scroll Horizontal">
-      <div className="w-[500%] h-screen flex relative" ref={panelsContainer}>
+      <div
+        className="w-[500%] h-screen flex flex-nowrap"
+        ref={panelsContainer}
+      >
         {flattenChildren(children).map((child) => (
           <section
-            className="w-full h-full flex items-center justify-center will-change-transform"
+            className="relative w-screen h-full flex items-center justify-center m-0 p-0"
             ref={(e) => createPanelsRefs(e, child.key.substring(1))}
             key={child.key.substring(1)}
           >
-        {child}
+            {child}
           </section>
         ))}
       </div>

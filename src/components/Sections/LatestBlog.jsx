@@ -37,7 +37,7 @@ const LatestBlog = () => {
     <Section
       id="why-us"
       ariaLabel="Zasto Izabrati Eventus"
-      className=""
+      className="relative flex items-center justify-center"
     >
       <Container>
         <Prose className="mb-12 space-y-2 text-center">

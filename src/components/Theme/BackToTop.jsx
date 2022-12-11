@@ -29,6 +29,7 @@ const BackToTop = () => {
     restDelta: 0.001,
   });
   return (
+    <div className="relative overflow-hidden">
     <Button
       variant="icon"
       onPress={() => goToTop()}
@@ -71,6 +72,7 @@ const BackToTop = () => {
         />
       </motion.svg>
     </Button>
+    </div>
   );
 };
 

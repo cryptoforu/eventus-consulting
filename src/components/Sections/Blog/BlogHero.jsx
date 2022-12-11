@@ -3,8 +3,8 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Heading } from "../../Elements/Index";
 const BlogHero = (props) => {
   return (
-    <div className="-mt-[4.5rem] lg:-mt-[4.75rem]"> 
-      <div className="relative pb-24 bg-gray-800">
+    <div className="overflow-hidden -mt-[4.5rem] lg:-mt-[4.75rem]"> 
+      <div className="relative py-24 bg-gray-800">
         <div className="absolute inset-0">
           <StaticImage
             src="../../../images/blog_hero.jpg"

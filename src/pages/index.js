@@ -8,7 +8,7 @@ import {
   LogoCloud
  } from "../components/Sections/Index";
 import HorizontallSection from "../components/Sections/Home/HorizontallSection.jsx";
-import ParallaxSections from "../components/Sections/Home/ParallaxSections";
+import GoogleAds from "../components/Sections/Home/GoogleAds";
 import ContactWrapper from "../components/Sections/Home/ContactWrapper";
 const IndexPage = () => {
 
@@ -18,7 +18,7 @@ const IndexPage = () => {
       <Features />
       <WhyUs />
       <HorizontallSection />
-      <ParallaxSections/>
+      <GoogleAds/>
       <LogoCloud />
       <ContactWrapper/>
       <LatestBlog/>

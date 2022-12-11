@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
+import { AnimatePresence, motion, useSpring, useScroll } from "framer-motion";
 import clsx from "clsx";
 import { useHover } from "react-aria";
 import { useNavbarStore } from "../../../store/main";
@@ -17,11 +17,11 @@ const hoverVariant = {
   },
   exit: {
     opacity: 0,
-    transition: { duration: 0.15, delay: 0.2 }, 
+    transition: { duration: 0.15, delay: 0.2 },
   },
 };
 
-const MainNav = ({isHomepage, }) => {
+const MainNav = ({ isHomepage }) => {
   const { scrolled, hoveredIndex, dispatch } = useNavbarStore();
   let { hoverProps } = useHover({
     onHoverStart: (e) => dispatch({ type: "hoverNav", payload: e.target.id }),
@@ -42,20 +42,25 @@ const MainNav = ({isHomepage, }) => {
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
+
   return (
     <header
       className={clsx(
-        "sticky top-0 z-50 shadow-md shadow-slate-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8",
+        "fixed top-0 left-0 z-50 w-full shadow-md shadow-slate-900/5 transition duration-500 dark:shadow-none sm:px-6 lg:px-8",
         {
           "text-slate-900 dark:text-white bg-white/95 backdrop-blur [@supports(backdrop-filter:blur(0))]:bg-white/75  dark:bg-slate-900/95 dark:backdrop-blur dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/75": scrolled,
           "bg-transparent text-white": !scrolled && !isHomepage,
-          "bg-transparent text-slate-900 dark:text-white": !scrolled && isHomepage
+          "bg-transparent text-slate-900 dark:text-white":
+            !scrolled && isHomepage,
         }
       )}
     >
-      <motion.div className="absolute bottom-0 inset-x-0 bg-gradient-to-r from-cyan-500 to-blue-500 origin-[0%] h-1" style={{scaleX}}/>
+      <motion.div
+        className="absolute bottom-0 inset-x-0 bg-gradient-to-r from-cyan-500 to-blue-500 origin-[0%] h-1"
+        style={{ scaleX }}
+      />
       <nav>
         <Container className="relative z-50 flex justify-between py-4 px-4">
           <div className="relative z-10 flex items-center gap-16">
@@ -64,39 +69,85 @@ const MainNav = ({isHomepage, }) => {
             </Link>
             <div className="hidden lg:flex lg:gap-10">
               {menuLinks.map((item, index) => (
-             <motion.span whileTap={{scale: 1.3 , borderRadius: '6px'}} transition={{type: 'spring', stiffness: 100, damping: 10, mass: 1}}>
-                <Link 
-                  {...hoverProps}
-                  id={index}
+                <motion.span
                   key={index}
-                  to={item.link}
-                  partiallyActive={item.link === '/blog' && true}
-                  className={clsx("relative -my-2 -mx-3 rounded-lg px-3 py-2 text-base font-semibold transition-colors delay-50 hover:delay-[0ms]", { 'hover:text-gray-900 dark:hover:text-slate-100': scrolled && isHomepage, 'hover:text-slate-200': !scrolled && !isHomepage   })}
-                  activeClassName={clsx('text-cyan-500 border-b-2 border-cyan-500')}
+                  whileTap={{ scale: 1.3, borderRadius: "6px" }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 10,
+                    mass: 1,
+                  }}
                 >
-                  <AnimatePresence>
-                    {hoveredIndex === index && (
-                      <motion.span
-                        className="absolute inset-0 rounded-lg border-b-2 border-cyan-500"
-                        layoutId="hoverBackground"
-                        initial="initial"
-                        animate="animate"
-                        exit="exit"
-                        variants={hoverVariant}
-                      />
+                  <Link
+                    {...hoverProps}
+                    id={index}
+                    to={item.link}
+                    partiallyActive={item.link === "/blog" && true}
+                    className={clsx(
+                      "relative -my-2 -mx-3 rounded-lg px-3 py-2 text-base font-semibold transition-colors delay-50 hover:delay-[0ms]",
+                      {
+                        "hover:text-gray-900 dark:hover:text-slate-100":
+                          scrolled && isHomepage,
+                        "hover:text-slate-200": !scrolled && !isHomepage,
+                      }
                     )}
-                  </AnimatePresence>
-                  <span className="relative z-10">{item.name}</span>
-                </Link>
+                    activeClassName={clsx(
+                      "text-cyan-500 border-b-2 border-cyan-500"
+                    )}
+                  >
+                    <AnimatePresence>
+                      {hoveredIndex === index && (
+                        <motion.span
+                          className="absolute inset-0 rounded-lg border-b-2 border-cyan-500"
+                          layoutId="hoverBackground"
+                          initial="initial"
+                          animate="animate"
+                          exit="exit"
+                          variants={hoverVariant}
+                        />
+                      )}
+                    </AnimatePresence>
+                    <span className="relative z-10">{item.name}</span>
+                  </Link>
                 </motion.span>
               ))}
             </div>
           </div>
           <div className="flex items-center gap-6">
             <MobileNav items={menuLinks} />
-
+            <Button
+              variant="rounded"
+              color="gradPurple"
+              onPress={() => navigate("/marketing-vodic")}
+              whileTap={{ scale: 1.3, borderRadius: "6px" }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 10,
+                mass: 1,
+              }}
+              className="hidden lg:block"
+            >
+              Marketing Vodic 
+            </Button>
+            <Button
+              variant="rounded"
+              color="black"
+              onPress={() => navigate("/blog")}
+              whileTap={{ scale: 1.3, borderRadius: "6px" }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 10,
+                mass: 1,
+              }}
+              className="hidden lg:block"
+            >
+      Blog
+          
+            </Button>
             <ThemeSelector />
-            <Button variant='rounded' color='gray' onPress={() => navigate('/blog')} whileTap={{scale: 1.3 , borderRadius: '6px'}} transition={{type: 'spring', stiffness: 100, damping: 10, mass: 1}} className="hidden lg:block">Blog</Button>
           </div>
         </Container>
       </nav>

@@ -1,8 +1,6 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
-
 import { motion } from "framer-motion";
-
 import {
   Section,
   Container,
@@ -25,7 +23,7 @@ const WhyUs = () => {
   });
 
   const MotionContainer = motion(Container, { forwardMotionProps: true });
-  return (
+  return ( 
     <>
       <Section
         id="why-us"
@@ -39,7 +37,6 @@ const WhyUs = () => {
               src="../../images/bg/bg-light.png"
               alt=""
               className="max-w-full h-auto"
-              layout="fullWidth"
             />
           </div>
           <MotionContainer

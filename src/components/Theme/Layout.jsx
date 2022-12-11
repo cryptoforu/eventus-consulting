@@ -1,23 +1,34 @@
-import React from 'react';
-import { useIsSSR } from 'react-aria';
-import { MainNav } from './Navbar/Index';
-import { BackToTop, ScrollSmooth } from './Index'
-import { MainFooter } from './Footer/Index';
-const Layout = ({children, location}) => {
-    let isSSR = useIsSSR()
-    const isHomePage = location.pathname === '/'
-    return (
-        <div className='bg-indigo-50 dark:bg-slate-900' id="viewport">
-           {!isSSR && <ScrollSmooth/>} 
-        <MainNav isHomepage={isHomePage}/>
-        <main id='content'>
-            {children}
-            <MainFooter/>
-        </main>
-        
-        <BackToTop/>
-        </div>
-    );
+import React from "react";
+import { motion } from "framer-motion";
+import { MainNav } from "./Navbar/Index";
+import { BackToTop } from "./Index";
+import { MainFooter } from "./Footer/Index";
+
+const variants = {
+  hidden: { opacity: 0, y: -20 },
+  show: { opacity: 1, y: 0, transition: { type: "spring", duration: 2, ease: "easeInOut" } },
+};
+
+const Layout = ({ children, location }) => {
+  const isHomePage = location.pathname === "/";
+  return (
+    <>
+      <MainNav isHomepage={isHomePage} />
+      <motion.main
+        key={location.pathname}
+        initial="hidden"
+        animate="show"
+        exit={{ opacity: 0, transition: { type: "spring", duration: 2, ease: "easeInOut" } }}
+        variants={variants}
+        className="relative w-full h-full overflow-x-hidden flex flex-col"
+      >
+        {children}
+        <MainFooter />
+      </motion.main>
+
+      <BackToTop />
+    </>
+  );
 };
 
 export default Layout;

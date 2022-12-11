@@ -1,4 +1,5 @@
-import React, { useRef, useId } from "react";
+import React, {useRef} from "react";
+import {useId} from 'react-aria'
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { motion, useInView } from "framer-motion";
@@ -39,19 +40,20 @@ const Features = () => {
   const features = data.allFeaturesJson.edges.map(({ node }) => node);
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const inView = useInView(ref, { once: true, amount: 0.1 });
   const MotionContainer = motion(Container, { forwardMotionProps: true });
   const MotionSection = motion(Section, { forwardMotionProps: true });
   let id = useId();
   return (
+  
     <MotionSection
       initial="hidden"
-      animate={isInView && "show"}
+      animate={inView ? 'show' : 'hidden'}
       variants={containerVariant}
       id="secondary-features"
       ariaLabel="Eventus usluge"
-      ref={ref}
-      className="my-16"
+     ref={ref}
+      className="relative flex flex-col items-center justify-center"
     >
       <svg aria-hidden="true" width={0} height={0}>
         <defs>
@@ -103,6 +105,7 @@ const Features = () => {
         </div>
       </MotionContainer>
     </MotionSection>
+  
   );
 };
 

@@ -3,8 +3,8 @@ import { Heading } from "../../Elements/Index";
 import { StaticImage } from "gatsby-plugin-image";
 const PostHero = (props) => {
   return (
-    <div className="-mt-[4.5rem] lg:-mt-[4.75rem]">
-      <div className="relative pb-32 bg-slate-900">
+    <div className="relative">
+      <div className="relative py-24 bg-slate-900">
         <div className="absolute inset-0">
           <StaticImage
             src="../../../images/bg/post_hero_dark.png"

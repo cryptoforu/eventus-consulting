@@ -2,25 +2,20 @@ import React from "react";
 import { useIsSSR } from "react-aria";
 import {
   HorizontallWraper,
-  Panel,
-  InstaCon,
+ InstaCon,
   MobileRes,
-  ResponsiveWeb,
+  WebPanel,
   FirstAndLast,
 } from "../../HorizontalScroll/Index";
 
 const HorizontallSection = () => {
   let isSSR = useIsSSR();
-
   return (
     <>
-      {isSSR ? null : (
+      {!isSSR && (
         <HorizontallWraper>
           <FirstAndLast first={true} />
-          <Panel
-            content={ResponsiveWeb().content}
-            image={ResponsiveWeb().image}
-          />
+         <WebPanel/>
           <MobileRes />
           <InstaCon />
           <FirstAndLast />

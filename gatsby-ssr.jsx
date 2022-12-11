@@ -3,7 +3,6 @@ import Layout from './wrapPageElement'
 import SSR from './wrapRootElement'
 const themeScript = `
   let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-
   function updateTheme(savedTheme) {
     let theme = 'dark'
     try {
@@ -27,7 +26,6 @@ const themeScript = `
     }
     return theme
   }
-
   function updateThemeWithoutTransitions(savedTheme) {
     updateTheme(savedTheme)
     document.documentElement.classList.add('[&_*]:!transition-none')
@@ -35,9 +33,7 @@ const themeScript = `
       document.documentElement.classList.remove('[&_*]:!transition-none')
     }, 0)
   }
-
   document.documentElement.setAttribute('data-theme', updateTheme())
-
   new MutationObserver(([{ oldValue }]) => {
     let newValue = document.documentElement.getAttribute('data-theme')
     if (newValue !== oldValue) {
@@ -47,13 +43,12 @@ const themeScript = `
       updateThemeWithoutTransitions(newValue)
     }
   }).observe(document.documentElement, { attributeFilter: ['data-theme'], attributeOldValue: true })
-
   mediaQuery.addEventListener('change', updateThemeWithoutTransitions)
   window.addEventListener('storage', updateThemeWithoutTransitions)
 `;
 
 const HtmlAttributes = {
-  className: "h-full bg-indigo-50 dark:bg-slate-900 antialiased", lang: 'bs',
+ className:'h-full antialiased scroll-smooth',  lang: 'bs',
 };
 
 const HeadComponents = [
@@ -61,7 +56,7 @@ const HeadComponents = [
 ];
 
 const BodyAttributes = {
-  className: "flex h-full flex-col",
+  className: "bg-indigo-50 dark:bg-slate-900",
 };
 
 

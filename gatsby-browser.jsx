@@ -1,3 +1,4 @@
+
 import './src/styles/global.css'
 import "@fontsource/inter/400.css"
 import "@fontsource/inter/variable.css"

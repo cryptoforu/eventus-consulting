@@ -11,6 +11,7 @@ const types = {
   pulsing: "pulsing",
   imgLoading: "imgLoading",
   setFaq: "SET_FAQ",
+  gsapWidth: "GSAP_WIDTH"
 };
 const initialState = {
   theme: "",
@@ -156,6 +157,20 @@ export default function useRootReducer() {
 
   };
 }
+
+const gsapState = {
+  maxWidth: 0,
+}
+const gsapReducer = (state = gsapState, {type, payload}) => {
+  switch (type) {
+    case types.gsapWidth: return {
+      ...state,
+      maxWidth: payload
+    }
+    default: return state
+  }
+}
+export const useGsapReducer = create(redux(gsapReducer, gsapState));
 export const useFaqReducer = create(redux(faqReducer, faqState));
 export const useThemeStore = create(redux(darkModeReducer, initialState));
 export const useNavbarStore = create(redux(navBarReducer, navbarState));

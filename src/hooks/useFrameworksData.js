@@ -1,6 +1,6 @@
 
 import { useStaticQuery, graphql } from 'gatsby';
-const useFrameworksData = () => {
+const useFrameworksData = () => { 
    const data = useStaticQuery(graphql`
    query FrameworksQuery {
     allFrameworksJson {
