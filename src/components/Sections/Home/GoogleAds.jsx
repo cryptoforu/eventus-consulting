@@ -31,7 +31,7 @@ const GoogleAds = () => {
       id="google-ads"
       ariaLabel="Google Ads"
       ref={ref}
-      className="relative flex items-center justify-center bg-indigo-50"
+      className="relative flex items-center justify-center bg-indigo-50 dark:bg-slate-900"
     >
       <div className="absolute inset-0 w-full h-full blur-xl">
         <StaticImage

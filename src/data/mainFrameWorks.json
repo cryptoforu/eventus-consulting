@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Javascript Frameworks",
+        "description": "Sa JavaScript-om možemo kreirati interaktivne web stranice za vaše poslovanje ili migrirati postojeće na novu moćnu platformu.",
+        "icon": "../images/javascript-logo.webp"
+    },
+    {
+        "id": 2,
+        "name": "PHP Wordpress i Laravel Aplikacije",
+        "description": "Od Wordpress blog-a do Laravel Admina. Nudimo kompletno rjesenje izrade Admin Panel-a prilagodjenog vama koristeci najpopularniji PHP framework Laravel",
+        "icon": "../images/php_icon.webp"
+    },
+    {
+        "id": 3,
+        "name": "Web Shop/E-commerc",
+        "description": "Zelite zapoceti internet prodaju? Imate vec postojece proizvode? Nudimo punu podrsku, odrzavanje i izradu svih vrsta web prodavnica",
+        "icon": "../images/ecommerce-icon.webp"
+    }
+]

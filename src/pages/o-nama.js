@@ -2,7 +2,8 @@ import React from 'react';
 import { Seo } from '../components/Seo';
 import { motion } from "framer-motion";
 import { BredCumbs } from "../components/Elements/Index";
-import { AboutHero, About } from '../components/Sections/About/Index'
+import { AboutHero, About, OurMission } from '../components/Sections/About/Index'
+import {Cta} from '../components/Sections/Index'
 import {
     staggerContainerVariant,
   } from "../components/Motion/variants";
@@ -18,7 +19,9 @@ const AboutUsPage = ({location}) => {
         animate='show'
         variants={staggerContainerVariant}>
           <AboutHero breadcumbs={<BredCumbs items={breadcumbs} />}/>
-          <About/>   
+          <About/> 
+          <OurMission/>  
+          <Cta/>
         </motion.div>
     );
 };

@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Google Oglasavanje",
+        "description": "Oglašavajte se na najvećem svjetskom pretraživaču putem Google PPC oglasa i dignite svoj biznis na novi nivo",
+        "icon": "../images/google_ads.webp"
+    },
+    {
+        "id": 2,
+        "name": "Održavanje društvenih mreža",
+        "description": "Kreiramo marketing kampanje na društvenim mrežama i nudimo odrzavanje istih. Dajemo vam priliku da steknete kvalifikovane potencijalne klijente",
+        "icon": "../images/social/group.png"
+    },
+    {
+        "id": 3,
+        "name": "Vizuelni Identitet Kompanije",
+        "description": "Snimanje dronom će podići vašu online prezentaciju na novi nivo.  Kroz foto i video sesije, stvaramo vizualni identitet vaše kompanije.",
+        "icon": "../images/dron_3d.webp"
+    }
+]
