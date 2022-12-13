@@ -2,10 +2,10 @@ import React, { useLayoutEffect, useRef } from "react";
 import flattenChildren from "react-keyed-flatten-children";
 import { Section } from "../Elements/Index";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+
 
 const HorizontallWraper = ({ children }) => {
-  gsap.registerPlugin(ScrollTrigger);
+
   const panels = useRef([]);
   const panelsContainer = useRef();
 
@@ -65,7 +65,7 @@ const HorizontallWraper = ({ children }) => {
         i || tween.progress(1);
       });
     }, 500);
-    ScrollTrigger.refresh()
+   
   }, []);
 
   return (

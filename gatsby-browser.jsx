@@ -1,7 +1,6 @@
-
 import './src/styles/global.css'
-import "@fontsource/inter/400.css"
-import "@fontsource/inter/variable.css"
+import "@fontsource/inter"
+import "@fontsource/lexend"
 import ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Layout from './wrapPageElement'
@@ -15,4 +14,4 @@ export const onRouteUpdate = ({ location, prevLocation }) => {
     ScrollTrigger.refresh() 
     console.log('new pathname', location.pathname)
     console.log('old pathname', prevLocation ? prevLocation.pathname : null)
-  }
+}
