@@ -1,29 +1,28 @@
-import React from 'react';
-import { Seo } from '../components/Seo';
-import { motion } from "framer-motion";
-import { BredCumbs } from "../components/Elements/Index";
-import { AboutHero, About, OurMission } from '../components/Sections/About/Index'
-import {Cta} from '../components/Sections/Index'
-import {
-    staggerContainerVariant,
-  } from "../components/Motion/variants";
-const AboutUsPage = ({location}) => {
-    const breadcumbs = [
-        {
-          title: "O nama",
-          slug: location.pathname,
-        },
-      ];
-    return (
-        <motion.div initial="hidden"
-        animate='show'
-        variants={staggerContainerVariant}>
-          <AboutHero breadcumbs={<BredCumbs items={breadcumbs} />}/>
-          <About/> 
-          <OurMission/>  
-          <Cta/>
-        </motion.div>
-    );
+import React from "react";
+import { Seo } from "../components/Seo";
+import { BredCumbs, PageWrapper } from "../components/Elements/Index";
+import { About, OurMission } from "../components/Sections/About/Index";
+import { Cta, PageHero } from "../components/Sections/Index";
+
+const AboutUsPage = ({ location }) => {
+  const breadcumbs = [
+    {
+      title: "O nama",
+      slug: location.pathname,
+    },
+  ];
+  return (
+    <PageWrapper location={location}>
+      <PageHero
+        title="Vođeni saradnjom."
+        gradientTitle="Pokrenuti idejama"
+        breadcumbs={<BredCumbs items={breadcumbs} />}
+      />
+      <About />
+      <OurMission />
+      <Cta />
+    </PageWrapper>
+  );
 };
 
 export default AboutUsPage;

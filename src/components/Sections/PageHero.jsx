@@ -1,11 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Heading, GradientText, ParticlesE } from "../../Elements/Index";
-import {
-    
-    titleVariant,
-  } from "../../Motion/variants";
-const AboutHero = (props) => {
+import { Heading, GradientText, ParticlesE } from "../Elements/Index";
+import { titleVariant } from "../Motion/variants";
+const PageHero = ({ title, gradientTitle, breadcumbs }) => {
   return (
     <div className="overflow-hidden -mt-[4.5rem] pt-[4.5rem] lg:-mt-[4.75rem] lg:pt-[4.75rem]">
       <div className="relative py-24">
@@ -26,17 +23,22 @@ const AboutHero = (props) => {
             <path d="M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12.0441132 L0,12.0441132 L0,0 Z" />
           </svg>
         </div>
-        <motion.div variants={titleVariant} transition={{ type: "spring", duration: 2, ease: "easeInOut" }} className="relative max-w-7xl mx-auto text-center py-24 px-4 sm:px-6 lg:px-8">
+        <motion.div
+          variants={titleVariant}
+          transition={{ type: "spring", duration: 2, ease: "easeInOut" }}
+          className="relative max-w-7xl mx-auto text-center py-24 px-4 sm:px-6 lg:px-8"
+        >
           <Heading
             headingLevel="h1"
             variant="white"
             className="text-4xl md:text-5xl lg:text-6xl"
           >
-            Vođeni saradnjom.<br></br>
-            <GradientText>Pokrenuti idejama</GradientText>.
+            {title}
+            <br></br>
+            <GradientText>{gradientTitle}</GradientText>.
           </Heading>
           <div className="mt-6 max-w-none text-xl text-gray-300">
-            {props.breadcumbs}
+            {breadcumbs}
           </div>
         </motion.div>
       </div>
@@ -44,4 +46,4 @@ const AboutHero = (props) => {
   );
 };
 
-export default AboutHero;
+export default PageHero;

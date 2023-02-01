@@ -2,7 +2,7 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 import { Button } from "./Index";
-const Accordion = ({ i, expanded, setExpanded, children, buttonLabel }) => {
+const Accordion = ({ i, expanded, setExpanded, children, buttonLabel }) => { 
   const isOpen = i === expanded;
   return (
     <>
@@ -45,7 +45,7 @@ function ContentPlaceholder({ children }) {
     <motion.div
       variants={{ collapsed: { scale: 0.8 }, open: { scale: 1 } }}
       transition={{ duration: 0.8 }}
-      className="p-8 origin-top"
+      className="p-8 origin-top bg-white dark:bg-black/50 shadow-lg rounded-md m-4 ring ring-pink-500 ring-offset-2 ring-offset-slate-50 dark:ring-offset-slate-900"
     >
       {children}
     </motion.div>

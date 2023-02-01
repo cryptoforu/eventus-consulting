@@ -11,7 +11,10 @@ const About = () => {
       ariaLabel="O nama"
       className="relative flex items-center justify-center -mt-48"
     >
-      <div className="absolute inset-0 w-full h-full pt-48 block dark:hidden" id="bgimg">
+      <div
+        className="absolute inset-0 w-full h-full pt-48 block dark:hidden"
+        id="bgimg"
+      >
         <StaticImage
           src="../../../images/bg/bg-light.png"
           alt=""

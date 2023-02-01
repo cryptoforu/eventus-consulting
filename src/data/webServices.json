@@ -1,0 +1,106 @@
+[
+    {
+        "name": "Razvoj Mobilnih i Web React Aplikacija",
+        "icon": "../images/dev/72351db1ea1b4386aec2da04b2da68a1.webp",
+        "animation": "./animations/109028-react-and-node-development-mobile-first.json",
+        "content": {
+            "title": "Zašto odabrati React.js za svoj projekat?",
+            "description": "U svojoj srži, React je napravljen za web stranice i aplikacije. Čak i sada, njegove prednosti je teško zanemariti. Od front-end razvoja i SEO vidljivosti do poboljšanja performansi na svim uređajima, otkrijte kako React JS koristi web stranicama."
+        },
+        "features": [
+            {
+                "title": "Stabilnost",
+                "description": "React.js radi brzo u pretraživaču na strani klijenta. Osigurava lakše iskustvo za korisnika i stabilne performanse web aplikacije.",
+                "icon": "../images/web_services/code_500px.png"
+            },
+            {
+                "title": "Responzivne i dinamične web stranice",
+                "description": "Uz React.js, programeri sada mogu graditi dinamičke stranice koje mogu podići vaše poslovanje na viši nivo. Različiti stilovi programiranja omogućavaju nam da razvijemo robusnu i oku ugodnu web stranicu koja ispunjava vaše specifične ciljeve.",
+                "icon": "../images/web_services/template_500px.png"
+            },
+            {
+                "title": "SEO optimizacija",
+                "description": "Backend renderovanje čini React.js projekte više SEO-prilagođenim. Štaviše, izvanredne performanse i odlično korisničko iskustvo su dva faktora koja takođe doprinose rangiranju vašeg softverskog proizvoda na pretraživačima.",
+                "icon": "../images/web_services/increase_500px.png"
+            }
+        ]
+    },
+    {
+        "name": "Laravel Admin Paneli",
+        "icon": "../images/dev/laravel-framework-logo.webp",
+        "animation": "./animations/27421-installing-program.json",
+        "content": {
+            "title": "Zašto je Laravel Framework najbolji izbor za PHP web razvoj?",
+            "description": "Zašto bi vaša sljedeća web stranica trebala biti napravljena u Laravel-u i koje su prednosti Laravel framework-a u odnosu na druge? Da biste započeli, evo razloga zašto predlažemo da razmotrite Laravel za svoj sljedeći projekat:"
+        },
+        "features": [
+            {
+                "title": "Brz je i jednostavan",
+                "description": "Za razliku od mnogih drugih, Laravel podržava keširanje za vašu web stranicu što je odlično za povećanje brzine vaše web stranice. Ovo čini Laravel odličnim izborom za vaše poslovanje ako su brzina web stranice i SEO prilagođenost neki od vaših zahtjeva.",
+                "icon": "../images/web_services/quick_mode_on_500px.png"
+            },
+            {
+                "title": "Sigurnost je ključna",
+                "description": "Sigurnost je briga broj jedan za većinu preduzeća. Uz Laravel, napredne sigurnosne funkcije se lako konfigurišu na većini web lokacija kako bi se poboljšala sigurnost i zaštitila web stranica od hakera i sajber kriminalaca.",
+                "icon": "../images/web_services/security_portal_500px.png"
+            },
+            {
+                "title": "Flexibilan",
+                "description": "Kako vaše poslovanje raste, tako će rasti i obim prometa na vašoj web lokaciji. Web lokacija izgrađena u Laravelu može rješavati zahtjeve web stranice mnogo brže od većine drugih framework-a.",
+                "icon": "../images/web_services/module_500px.png"
+            }
+        ]
+    },
+    {
+        "name": "Wordpress Stranice/Blog",
+        "icon": "../images/dev/wordpress.png",
+        "animation": "./animations/64786-cross-site-copy.json",
+        "content": {
+            "title": "Šta je WordPress?",
+            "description": "WordPress pokreće gotovo jednu trećinu svjetskih web stranica, od malih ličnih blogova do složenih web stranica. Evo nekoliko ključnih prednosti korištenja WordPress-a za postavljanje i vođenje vaše poslovne ili lične stranice."
+        },
+        "features": [
+            {
+                "title": "Fleksibilan i prilagodljiv",
+                "description": "Iako je WordPress prvobitno dizajniran da podrži bloganje i srodne vrste online objavljivanja, WordPress se koristi za pokretanje složenih web lokacija za velike multinacionalne korporacije, upravljanje malim preduzećima i kreiranje ličnih blogova.",
+                "icon": "../images/web_services/repository_500px.png"
+            },
+            {
+                "title": "Jednostavan za upotrebu—čak i za početnike",
+                "description": "WordPress stranica se može instalirati i pokrenuti za nekoliko minuta, čak i bez ikakve tehničke stručnosti. Sve što korisniku treba je ime domene i web hosting račun",
+                "icon": "../images/web_services/macbook_idea_500px.png"
+            },
+            {
+                "title": "Teme nude više opcija",
+                "description": "WordPress teme nude korisnicima niz izbora za fino podešavanje izgleda i funkcija nove stranice, zahvaljujući velikom i rastućem direktoriju osnovnih i vrhunskih tema",
+                "icon": "../images/web_services/macbook_pictures_500px.png"
+            }
+        ]
+    },
+    {
+        "name": "E-Prodavnice",
+        "icon": "../images/dev/shopping_cart.webp",
+        "animation": "./animations/97189-build-your-store.json",
+        "content": {
+            "title": "Ključne prednosti e-trgovine za vaše poslovanje",
+            "description": "E-trgovina, poznata i kao elektronska trgovina, omogućava preduzećima i potrošačima da kupuju na mreži. Preduzeća štede na troškovima, a kupci mogu birati između širokog spektra izbora proizvoda i kupovati s bilo kojeg mjesta u svijetu, u bilo koje doba dana."
+        },
+        "features": [
+            {
+                "title": "Niski troškovi",
+                "description": "Značajna prednost e-trgovine je što je pokretanje online trgovine mnogo jeftinije od otvaranja fizičke trgovine. Marketinške i reklamne kampanje su također jeftine. Uz to, online portal je kompjuteriziran i automatiziran, što značajno štedi novac.",
+                "icon": "../images/web_services/recieve_500px.png"
+            },
+            {
+                "title": "Brži proces kupovine",
+                "description": "Odlazak do prodavnice koja je otprilike dva do tri sata udaljena od vašeg doma više nije potrebna. Jednostavno se opustite u udobnosti vlastitog doma ili radnog mjesta, izvršite pretragu proizvoda i dovršite narudžbu.",
+                "icon": "../images/web_services/click_&_collect_500px.png"
+            },
+            {
+                "title": "Šira baza kupaca",
+                "description": "Još jedna prednost e-commerce prodavnica je to što nisu geografski ograničene. Geografske granice postaju nevažne kada se posluje na mreži putem e-trgovina. Svoju robu možete prodati online kupcima širom svijeta",
+                "icon": "../images/web_services/online_shopping_500px.png"
+            }
+        ]
+    }
+]

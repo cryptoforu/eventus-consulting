@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Kompletno održavanje",
+        "description": "Vršimo održavanje stranica, te ažuriranje sadržaja kroz konsultacije sa klijentom.",
+        "icon": "../images/web_services/computer_support_480px.png"
+    },
+    {
+        "name": "Optimizacija postojećih web stranica",
+        "description": "Ako već imate web stranicu, ali vam je potreban redizajn i optimizacija mi to možemo učiniti umjesto vas",
+        "icon": "../images/web_services/rotate_left_480px.png"
+    },
+    {
+        "name": "SEO Optimizacija",
+        "description": "Kompletna optimizacija za pretraživače. Možemo vas rangirati da budete prvi na Google-u",
+        "icon": "../images/web_services/account_480px.png"
+    },
+    {
+        "name": "Hosting",
+        "description": "Ukoliko nemate hosting rješenje i naziv domene mi ćemo to učiniti umjesto vas uz kompletnu uslugu",
+        "icon": "../images/web_services/cloud_storage_480px.png"
+    }
+]

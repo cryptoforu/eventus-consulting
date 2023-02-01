@@ -21,7 +21,7 @@ const ContactWrapper = () => {
     <Section
       id="home-form"
       ariaLabel="Kontaktirajte Nas"
-      className="relative flex flex-col min-h-full justify-center md:px-12"
+      className="relative z-[1] flex flex-col min-h-full justify-center md:px-12"
     >
       <motion.div
         initial="hidden"
