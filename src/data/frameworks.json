@@ -1,32 +1,38 @@
 [
     {
         "label": "React",
-        "logo": "../images/dev/react_500.png",
+        "logo": "../images/dev/logos/react-light.png",
+        "darkLogo": "../images/dev/logos/react-light.png",
         "link": "https://reactjs.org/"
     },
     {
         "label": "Laravel",
-        "logo": "../images/dev/laravel_500.png",
+        "logo": "../images/dev/logos/laravel-light.png",
+        "darkLogo": "../images/dev/logos/laravel-light.png",
         "link": "https://laravel.com/"
     },
     {
         "label": "Gatsby",
-        "logo": "../images/dev/gatsby_500.png",
+        "logo": "../images/dev/logos/gatsby-light.png",
+        "darkLogo": "../images/dev/logos/gatsby-light.png",
         "link": "https://www.gatsbyjs.com/"
     },
     {
         "label": "Next.js",
-        "logo": "../images/dev/next_500.png",
+        "logo": "../images/dev/logos/next-light.png",
+        "darkLogo": "../images/dev/logos/next-dark.png",
         "link": "https://nextjs.org/"
     },
     {
         "label": "Tailwindcss",
-        "logo": "../images/dev/tailwind_500.png",
+        "logo": "../images/dev/logos/tailwind-light.png",
+        "darkLogo": "../images/dev/logos/tailwind-light.png",
         "link": "https://tailwindcss.com/"
     },
     {
         "label": "Wordpress",
-        "logo": "../images/dev/wordpress_500.png",
+        "logo": "../images/dev/logos/wordpress-light.png",
+        "darkLogo": "../images/dev/logos/wordpress-light.png",
         "link": "https://wordpress.com/"
     }
 ]

@@ -5,7 +5,8 @@ import clsx from "clsx";
 const styleVariants = {
   white: 'font-extrabold tracking-tight text-white',
   slate: 'font-extrabold tracking-tight text-slate-900',
-  base: 'font-display font-bold text-slate-800 dark:text-slate-200 tracking-tight'
+  base: 'font-display font-bold text-slate-800 dark:text-slate-200 tracking-tight',
+  secondary: 'font-bold tracking-tight text-slate-600 dark:text-slate-400',
 }
 
 

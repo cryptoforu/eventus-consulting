@@ -1,37 +1,17 @@
 import React from "react";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-import { Link, Heading, Prose, Button } from "../Elements/Index";
-import useFrameworksData from "../../hooks/useFrameworksData";
+import {  StaticImage } from "gatsby-plugin-image";
+import {  Heading, Prose, Button } from "../Elements/Index";
 
+import FrameWorksIcons from "../Content/FrameWorksIcons";
 const WebPanel = () => {
-  const { frameworks } = useFrameworksData();
+ 
   return (
     <div className="relative py-16 w-full h-full flex items-center justify-center">
       <div className="lg:mx-auto lg:max-w-screen-2xl	lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
         <div className="px-4 max-w-xl mx-auto sm:px-6  lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
           <div>
-            <ul className="hidden md:flex mx-auto mt-8  max-w-xl flex-wrap justify-center gap-x-4 lg:mx-0 lg:justify-start">
-              {frameworks.map(({ node }, i) => (
-                <Link
-                  to={node.link}
-                  whileTap={{ scale: 1.3, borderRadius: "6px" }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 100,
-                    damping: 10,
-                    mass: 1,
-                  }}
-                  key={i}
-                  className="h-16 w-16 flex items-center justify-center"
-                >
-                  <GatsbyImage
-                    image={getImage(node.logo)}
-                    alt={node.label}
-                    className="max-w-full h-auto"
-                  />
-                </Link>
-              ))}
-            </ul>
+            <FrameWorksIcons variant="panel" />
+            
             <div className="mt-6">
               <Heading
                 headingLevel="h2"

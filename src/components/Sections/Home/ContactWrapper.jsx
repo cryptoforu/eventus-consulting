@@ -46,10 +46,10 @@ const ContactWrapper = () => {
           </Heading>
         </motion.span>
       </motion.div>
-      <div className="grid lg:grid-cols-2 items-center gap-12 px-2 md:px-0">
+      <div className="grid lg:grid-cols-2 items-center gap-12 px-2 md:px-0"> 
         <div className="col-span-1">
           <div className="relative w-full">
-            <div className="rounded-3xl border border-gray-100 bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 backdrop-blur-2xl">
+            <div className="rounded-3xl border border-gray-100 bg-white bg-opacity-50 backdrop-filter backdrop-blur-[8px] dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10">
               <div className="p-8 py-12 sm:p-16">
                 <Heading
                   headingLevel="h3"

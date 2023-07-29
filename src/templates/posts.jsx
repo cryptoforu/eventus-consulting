@@ -65,7 +65,7 @@ export default function PostTemplate({
 }
 
 export const query = graphql`
-  query($id: String!, $previousPostId: String, $nextPostId: String) {
+  query ($id: String!, $previousPostId: String, $nextPostId: String) {
     mdx(id: { eq: $id }) {
       fields {
         timeToRead {
@@ -87,7 +87,8 @@ export const query = graphql`
         tags
         featured_img {
           childImageSharp {
-            fixed(height: 630, width: 1200) {
+            gatsbyImageData(height: 630, width: 1200)
+            original {
               src
             }
           }
@@ -116,6 +117,6 @@ export const Head = ({ data }) => (
   <Seo
     title={data.mdx.frontmatter.title}
     description={data.mdx.excerpt}
-    image={data.mdx.frontmatter.featured_img.childImageSharp.fixed.src}
+    image={data.mdx.frontmatter.featured_img.childImageSharp.original.src}
   />
 );

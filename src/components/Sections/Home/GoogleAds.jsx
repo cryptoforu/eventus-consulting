@@ -33,7 +33,7 @@ const GoogleAds = () => {
       ref={ref}
       className="relative flex items-center justify-center bg-indigo-50 dark:bg-slate-900"
     >
-      <div className="absolute inset-0 w-full h-full blur-xl">
+      <div className="absolute inset-0 w-full h-full blur-xl dark:gradient-mask-t-50">
         <StaticImage
           src="../../../images/bg/post_hero.png"
           alt=""

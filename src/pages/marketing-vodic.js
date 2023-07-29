@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Seo } from "../components/Seo";
-import { StaticImage } from "gatsby-plugin-image";
+import {  GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
   GuideWrapper,
   GuideSections,
@@ -12,9 +12,16 @@ import {
   CallToAction
 } from "../components/MarketingGuide/Index";
 import clsx from "clsx";
+import useDarkImage from "../hooks/useDarkImage";
+
+
+
 const MarketingGuidePage = ({ data }) => {
   const { allMarkdownRemark } = data;
-const { second } = data;
+  const { second } = data;
+  
+  const image = useDarkImage()('background');
+  
 
   return (
     <>
@@ -34,12 +41,9 @@ const { second } = data;
               dangerouslySetInnerHTML={{ __html: node.html }}
             />
             <div className="absolute -inset-x-0 -top-40 -bottom-32 w-full h-full">
-              <div className="absolute left-full top-0 translate-y-[0%] -translate-x-[50%] sm:left-1/2 sm:-translate-y-[15%] sm:-translate-x-[20%] md:translate-x-[0%] lg:translate-x-[5%] lg:translate-y-[4%] xl:-translate-y-[8%] xl:translate-x-[15%]">
-                <StaticImage
-                  src="../images/bg/background.jpg"
-                  className="max-w-full h-auto"
-                  alt=""
-                />
+              <div className="absolute left-full top-0 dark:opacity-40 dark:blur-lg translate-y-[0%] -translate-x-[50%] sm:left-1/2 sm:-translate-y-[15%] sm:-translate-x-[20%] md:translate-x-[0%] lg:translate-x-[5%] lg:translate-y-[4%] xl:-translate-y-[8%] xl:translate-x-[15%]">
+                <GatsbyImage image={getImage(image.node)} alt={image.node.name} className="max-w-full h-auto"/>
+              
               </div>
             </div>
           </GuideSections>
@@ -58,12 +62,8 @@ const { second } = data;
               dangerouslySetInnerHTML={{ __html: node.html }}
             />
             <div className="absolute -inset-x-0 -top-40 -bottom-32 w-full h-full">
-              <div className="absolute left-full top-0 translate-y-[0%] -translate-x-[50%] sm:left-1/2 sm:-translate-y-[15%] sm:-translate-x-[20%] md:translate-x-[0%] lg:translate-x-[5%] lg:translate-y-[4%] xl:-translate-y-[8%] xl:translate-x-[15%]">
-                <StaticImage
-                  src="../images/bg/background.jpg"
-                  className="max-w-full h-auto"
-                  alt=""
-                />
+              <div className="absolute left-full top-0 dark:opacity-40 dark:blur-lg translate-y-[0%] -translate-x-[50%] sm:left-1/2 sm:-translate-y-[15%] sm:-translate-x-[20%] md:translate-x-[0%] lg:translate-x-[5%] lg:translate-y-[4%] xl:-translate-y-[8%] xl:translate-x-[15%]">
+              <GatsbyImage image={getImage(image)} alt={image.node.name} className="max-w-full h-auto"/>
               </div>
             </div>
           </GuideSections>

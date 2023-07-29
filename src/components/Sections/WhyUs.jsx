@@ -16,6 +16,11 @@ import {
   cardVariants,
   titleVariant,
 } from "../Motion/variants";
+import { cubicBezier } from "framer-motion"
+import RectLight from "../Svg/ReactLight";
+
+const ease = cubicBezier(0.17, 0.55, 0.55, 1);
+
 const WhyUs = () => {
   const { ref, inView } = useInView({
     threshold: 0.3,
@@ -23,20 +28,28 @@ const WhyUs = () => {
   });
 
   const MotionContainer = motion(Container, { forwardMotionProps: true });
-  return ( 
+  return (
     <>
       <Section
         id="why-us"
         ariaLabel="Zasto Izabrati Eventus"
-        className="relative flex items-center justify-center"
+        className="relative flex items-center justify-center z-10"
         ref={ref}
       >
         <div>
-          <div className="absolute inset-0 w-full h-full" id="bgimg">
+          <div
+            className="absolute inset-0 w-full h-full dark:hidden"
+            id="bgimg"
+          >
             <StaticImage
               src="../../images/bg/bg-light.png"
               alt=""
               className="max-w-full h-auto"
+            />
+          </div>
+          <div className="hidden dark:absolute dark:inset-0 dark:w-full dark:h-full dark:gradient-mask-t-10 dark:block">
+            <RectLight
+              className={"w-full h-full absolute inset-0 gradient-mask-b-0 "}
             />
           </div>
           <MotionContainer
@@ -44,20 +57,18 @@ const WhyUs = () => {
             animate={inView ? "show" : ""}
             variants={staggerContainerVariant}
           >
-            <div className="grid gap-5  lg:grid-cols-2">
+            <div className="grid gap-5  lg:grid-cols-2 relative">
               <motion.div
                 variants={titleVariant}
                 transition={{
-                  type: "spring",
-                  stiffness: 100,
-                  damping: 10,
-                  mass: 1,
+                  duration:  0.9,
+                  ease: ease
                 }}
                 className="flex flex-col justify-center"
               >
                 <Prose className="space-y-2">
                   <span className="lead">Zašto Izabrati Nas</span>
-
+                 
                   <Heading headingLevel="h3">
                     Zašto je Eventus{" "}
                     <GradientText> Rangiran Na Vrhu</GradientText> među vodećim
@@ -116,7 +127,7 @@ const WhyUs = () => {
               </motion.div>
               <motion.div
                 variants={cardVariants}
-                transition={{ type: "spring", duration: 2, ease: "easeInOut" }}
+                transition={{ duration: 0.7, ease }}
                 className="flex flex-col justify-center items-center"
               >
                 <div className="relative group m-8">
@@ -146,7 +157,7 @@ const WhyUs = () => {
                         mass: 1,
                       }}
                     >
-                      <span>Započni Projekat</span>{" "}
+                      <span className="relative">Započni Projekat</span>{" "}
                       <ChevronRightIcon className="w-5 inline-flex"></ChevronRightIcon>{" "}
                     </Button>
                   </Prose>

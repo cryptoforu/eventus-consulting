@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const baseStyles = {
   solid:
-    "inline-flex justify-center rounded-lg py-2 px-3 text-sm font-semibold outline-2 outline-offset-2 transition-colors",
+    "relative inline-flex justify-center rounded-lg py-2 px-3 text-sm font-semibold outline-2 outline-offset-2 transition-colors",
   outline:
     "inline-flex justify-center rounded-lg border py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] outline-2 outline-offset-2 transition-colors",
     icon: 'inline-flex',
@@ -30,7 +30,8 @@ const variantStyles = {
       "border-gray-300 hover:border-gray-400 active:bg-gray-100 active:text-gray-700/80",
     pink: 'outline outline-offset-2 outline-pink-500',  
     slate: 'outline outline-offset-2 outline-slate-900',
-      gradPurple: 'bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
+    indigo: 'border-transparent ring-1 ring-indigo-400',
+    gradPurple: 'bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800'
   },
   icon: {
     gray: ''

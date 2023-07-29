@@ -16,7 +16,7 @@ export function Prose({
       className={clsx(
         className,
         proseVariants[variant],
-        "prose-slate max-w-none dark:prose-invert  dark:text-slate-300",
+        "prose-slate max-w-none dark:prose-invert  dark:text-slate-400",
         // headings
         "prose-headings:font-display prose-headings:font-bold prose-h2:text-5xl prose-headings:text-slate-800 dark:prose-headings:text-slate-200",
 

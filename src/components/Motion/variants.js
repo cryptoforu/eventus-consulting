@@ -8,7 +8,7 @@ const containerVariant = {
         duration: 0.6,
         delayChildren: 0.5,
       },
-    },
+    }, 
   };
   
   const staggerContainerVariant = {
@@ -23,7 +23,7 @@ const containerVariant = {
     },
   };
   
-  const titleVariant = {
+  const titleVariant = { 
     show: {
       x: 0,
       opacity: 1,

@@ -1,12 +1,12 @@
 import React from "react";
-import { SSRProvider } from "react-aria";
+import {  I18nProvider } from "react-aria";
 
 const wrapRootElement = ({ element }) => {
 
   return (
-    <SSRProvider>
+    <I18nProvider locale="bs-BA">
       {element}
-    </SSRProvider>
+    </I18nProvider>
   );
 };
 export default wrapRootElement;

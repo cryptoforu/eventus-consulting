@@ -34,7 +34,7 @@ const CardGlow = ({ children }) => {
 
   return (
     <motion.div
-      className="relative"
+      className="items relative"
       initial="initial"
       whileHover="hover"
       variants={wrapperVariant}

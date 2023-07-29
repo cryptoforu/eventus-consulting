@@ -10,8 +10,8 @@ const FirstAndLast = (props) => {
   const { first } = props;
   return (
     <Container className="relative py-16 w-full h-full flex items-center justify-center">
-      <div className="isolate ">
-        <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
+      <div className="isolate">
+        <div className="absolute inset-x-0 top-[-1rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem] dark:opacity-50">
           <svg
             className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
             viewBox="0 0 1155 678"
@@ -43,7 +43,7 @@ const FirstAndLast = (props) => {
             <div className="mx-auto max-w-5xl pt-20 pb-32 sm:pt-48 sm:pb-40">
               <div>
                 <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                  <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                  <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 transition-colors duration-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:ring-indigo-600/80 dark:hover:ring-indigo-400">
                     {first ? (
                       <span className="text-gray-600 dark:text-slate-300">
                         Naš Portofolio.{" "}

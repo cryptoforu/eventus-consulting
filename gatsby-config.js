@@ -44,6 +44,17 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `blurred`,
+          quality: 80,
+        },
+      },
+    },
+    "gatsby-transformer-sharp",
     "gatsby-plugin-image",
     {
       resolve: `gatsby-plugin-mdx`,
@@ -138,8 +149,7 @@ module.exports = {
         display: `standalone`,
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    
     {
       resolve: "gatsby-source-filesystem",
       options: {

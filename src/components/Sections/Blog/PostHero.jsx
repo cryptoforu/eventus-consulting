@@ -7,8 +7,10 @@ const PostHero = (props) => {
       <div className="relative py-24 bg-slate-900">
         <div className="absolute inset-0">
           <StaticImage
-            src="../../../images/bg/post_hero_dark.png"
+            src="../../../images/bg/post_hero_dark.webp"
             className="w-full h-full object-cover block"
+            layout="fullWidth"
+            loading="eager"
             alt=""
           />
         </div>

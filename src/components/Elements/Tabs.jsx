@@ -59,7 +59,7 @@ const Tabs = (props) => {
   return (
     <div className="hidden sm:block">
       <div className="relative">
-        <div {...tabListProps} ref={ref} className={"flex space-x-4"}>
+        <div {...tabListProps} ref={ref} className={"flex relative flex-wrap max-w-7xl mx-auto justify-center gap-x-6 gap-y-4"}>
           {[...state.collection].map((item) => (
             <Tab key={item.key} item={item} state={state} />
           ))}

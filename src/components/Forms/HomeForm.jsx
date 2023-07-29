@@ -20,20 +20,19 @@ const HomeForm = () => {
         }}
       >
         <Form className="space-y-4">
-          
-            <TextInput
-              label="Ime"
-              name="firstName"
-              type="text"
-              placeholder="Ime"
-            />
-            <TextInput
-              label="Prezime"
-              name="lastName"
-              type="text"
-              placeholder="Prezime"
-            />
-          
+          <TextInput
+            label="Ime"
+            name="firstName"
+            type="text"
+            placeholder="Ime"
+          />
+          <TextInput
+            label="Prezime"
+            name="lastName"
+            type="text"
+            placeholder="Prezime"
+          />
+
           <TextInput
             label="Telefon"
             name="phone"
@@ -47,7 +46,12 @@ const HomeForm = () => {
             placeholder="Email"
           />
           <div className="pt-1">
-            <Button variant="rounded" color="gradPurple" type="submit" className='w-full'>
+            <Button
+              variant="rounded"
+              color="gradPurple"
+              type="submit"
+              className="w-full"
+            >
               Kontaktiraj
             </Button>
           </div>

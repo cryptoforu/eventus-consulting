@@ -13,7 +13,7 @@ const BackToTop = () => {
 
   const isBrowser = typeof window !== "undefined" ? true : false;
   useEffect(() => {
-    return scrollY.onChange((latest) => {
+    return scrollY.on('change', (latest) => {
       dispatch({type: 'showBtn', payload: latest > 100})
     })
   }, [dispatch, scrollY])

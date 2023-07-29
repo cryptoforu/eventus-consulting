@@ -53,7 +53,7 @@ const LatestBlog = () => {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post, index) => (
             <BlogCard
-            key={index}
+              key={index}
               image={post.frontmatter.featured_img}
               alt={post.frontmatter.title}
               title={post.frontmatter.title}

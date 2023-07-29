@@ -13,6 +13,11 @@ const useFrameworksData = () => {
             gatsbyImageData
           }
         }
+        darkLogo {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
       }
     }
   }

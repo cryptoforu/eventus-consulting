@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 import React from "react";
 import { Button, Link, Logo } from "../Elements/Index";
+import { ThemeSelector } from "../Theme/Navbar/Index";
 const Navigation = () => {
   const data = useStaticQuery(graphql`
   query PrezentacijaQuery {
@@ -31,6 +32,7 @@ const Navigation = () => {
             <Button variant="rounded" className='hidden md:block'>
         <a href={data.file.publicURL} target='_blank' rel="noreferrer">Skini PDF Verziju <StaticImage src='../../images/pdf_512px.png' className="w-6 h-6" alt='pdf'/></a>
             </Button>
+            <ThemeSelector />
           </div>
         </div>
       </nav>

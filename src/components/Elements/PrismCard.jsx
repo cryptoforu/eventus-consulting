@@ -1,6 +1,10 @@
 import React, { Fragment } from "react";
-import Highlight, { defaultProps } from "prism-react-renderer";
+import { Highlight } from "prism-react-renderer";
 import clsx from "clsx";
+
+
+
+
 const codeLanguage = "javascript";
 const code = `function App({Component, pageProps}) {
     return (
@@ -48,6 +52,7 @@ const variants = {
 };
 
 const PrismCard = ({ variant = "javascript" }) => {
+ 
   const tabs = [
     {
       name: "moderni-web-dizajn.js",
@@ -105,20 +110,17 @@ const PrismCard = ({ variant = "javascript" }) => {
             ))}
           </div>
           <Highlight
-            {...defaultProps}
             code={variants[variant].code}
             language={variants[variant].codeLanguage}
-            theme={undefined}
           >
-            {({ className, style, tokens, getLineProps, getTokenProps }) => (
+            {({ className, tokens, getLineProps, getTokenProps }) => (
               <pre
                 className={clsx(
                   className,
                   "flex overflow-x-auto pb-6 text-cyan-300"
                 )}
-                style={style}
               >
-                <code className="px-4">
+                <code className={clsx('px-4')}>
                   {tokens.map((line, index) => (
                     <div key={index} {...getLineProps({ line })}>
                       {line.map((token, index) => (

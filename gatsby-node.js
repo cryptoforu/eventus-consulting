@@ -64,4 +64,4 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         value: readingTime(node.body)
       })
     }
-  }
+}

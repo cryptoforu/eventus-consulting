@@ -1,8 +1,6 @@
-import React, {useRef} from "react";
-import {useId} from 'react-aria'
+import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { motion, useInView } from "framer-motion";
 import {
   Section,
   Container,
@@ -11,11 +9,8 @@ import {
   GradientText,
 } from "../Elements/Index";
 import { CardGlow } from "../Motion/Index";
-import {
-  containerVariant,
-  titleVariant,
-  cardVariants,
-} from "../Motion/variants";
+import { useInView } from "react-intersection-observer";
+
 const Features = () => {
   const data = useStaticQuery(graphql`
     query FeaturesQuery {
@@ -39,40 +34,28 @@ const Features = () => {
   `);
   const features = data.allFeaturesJson.edges.map(({ node }) => node);
 
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, amount: 0.1 });
-  const MotionContainer = motion(Container, { forwardMotionProps: true });
-  const MotionSection = motion(Section, { forwardMotionProps: true });
-  let id = useId();
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
   return (
-  
-    <MotionSection
-      initial="hidden"
-      animate={inView ? 'show' : 'hidden'}
-      variants={containerVariant}
+    <Section
       id="secondary-features"
       ariaLabel="Eventus usluge"
-     ref={ref}
+      ref={ref}
       className="relative flex flex-col items-center justify-center"
     >
-      <svg aria-hidden="true" width={0} height={0}>
-        <defs>
-          <clipPath id={`${id}-0`} clipPathUnits="objectBoundingBox">
-            <path d="M0,0 h0.729 v0.129 h0.121 l-0.016,0.032 C0.815,0.198,0.843,0.243,0.885,0.243 H1 v0.757 H0.271 v-0.086 l-0.121,0.057 v-0.214 c0,-0.032,-0.026,-0.057,-0.057,-0.057 H0 V0" />
-          </clipPath>
-          <clipPath id={`${id}-1`} clipPathUnits="objectBoundingBox">
-            <path d="M1,1 H0.271 v-0.129 H0.15 l0.016,-0.032 C0.185,0.802,0.157,0.757,0.115,0.757 H0 V0 h0.729 v0.086 l0.121,-0.057 v0.214 c0,0.032,0.026,0.057,0.057,0.057 h0.093 v0.7" />
-          </clipPath>
-          <clipPath id={`${id}-2`} clipPathUnits="objectBoundingBox">
-            <path d="M1,0 H0.271 v0.129 H0.15 l0.016,0.032 C0.185,0.198,0.157,0.243,0.115,0.243 H0 v0.757 h0.729 v-0.086 l0.121,0.057 v-0.214 c0,-0.032,0.026,-0.057,0.057,-0.057 h0.093 V0" />
-          </clipPath>
-        </defs>
-      </svg>
-      <MotionContainer
-        variants={titleVariant}
-        transition={{ ease: "easeInOut", duration: 1 }}
-      >
-        <div className=" text-center">
+      <Container>
+        <div
+          style={{
+            transform: inView ? "none" : "translateX(-200px)",
+            opacity: inView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          }}
+          className="text-center"
+          id="text"
+        >
           <GradientText className={"text-xl font-semibold"}>
             Popularne Usluge
           </GradientText>
@@ -80,12 +63,16 @@ const Features = () => {
             Izgradite svoj brend uz <GradientText>Eventus</GradientText>
           </Heading>
         </div>
-      </MotionContainer>
-      <MotionContainer
-        variants={cardVariants}
-        transition={{ ease: "easeInOut", duration: 1 }}
-      >
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3">
+      </Container>
+      <Container>
+        <div
+          style={{
+            transform: inView ? "none" : "translateY(-200px)",
+            opacity: inView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          }}
+          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+        >
           {features.map((feature) => (
             <CardGlow key={feature.title}>
               <Card
@@ -103,9 +90,8 @@ const Features = () => {
             </CardGlow>
           ))}
         </div>
-      </MotionContainer>
-    </MotionSection>
-  
+      </Container>
+    </Section>
   );
 };
 

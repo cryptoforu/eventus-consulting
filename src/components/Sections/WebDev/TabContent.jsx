@@ -7,15 +7,15 @@ const Animation = (props) => {
     animationData: props.animation,
     loop: true,
   };
-  const { View } = useLottie(options);
+  const { View } = useLottie(options, {padding: '8px'});
   return <>{View}</>;
 };
 
-const TabContent = ({ item }) => {
+const TabContent = ({ item }) => { 
   return (
     <div className="mt-20 p-8 overflow-hidden rounded-2xl bg-slate-200 dark:bg-[#0A101F]/80 ring-1 ring-white/10 backdrop-blur">
       <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
-        <div className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
+        <div className="mt-10 mx-4 relative lg:mt-0 lg:col-start-1">
           <Animation animation={item.animation} />
         </div>
         <div className="lg:col-start-2 lg:self-start">

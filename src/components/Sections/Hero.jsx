@@ -1,5 +1,6 @@
 import React from "react";
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
+import FrameWorksIcons from "../Content/FrameWorksIcons";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
   Container,
   Heading,
@@ -11,8 +12,7 @@ import {
   PhoneFrame,
 } from "../Elements/Index";
 import { SlideImage } from "../Motion/Index";
-import useFrameworksData from "../../hooks/useFrameworksData";
-
+import useAdsImages from "../../hooks/useAdsImages";
 function AppDemo() {
   return (
     <AppScreen>
@@ -24,8 +24,8 @@ function AppDemo() {
 }
 
 const Hero = () => {
-  const { frameworks } = useFrameworksData();
 
+  const { light, dark } = useAdsImages();
   return (
     <div className="overflow-hidden -mt-[4.5rem] pt-[4.5rem] lg:-mt-[4.75rem] lg:pt-[4.75rem]">
       <div className="py-20 sm:py-32 lg:pb-32 xl:pb-36">
@@ -58,28 +58,27 @@ const Hero = () => {
                     povezanom svijetu.
                   </p>
                 </Prose>
-                <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
-                  <StaticImage
-                    src="../../images/google_ads.png"
-                    alt="eventus google ads"
-                    loading="eager"
-                    placeholder="none"
-                    className="w-32"
-                  />
-                  <StaticImage
-                    src="../../images/fb_ads.png"
-                    alt="eventus facebook advertising"
-                    loading="eager"
-                    placeholder="none"
-                    className="w-32"
-                  />
-                  <StaticImage
-                    src="../../images/insta_ads.png"
-                    alt="eventus instagram advertising"
-                    loading="eager"
-                    placeholder="none"
-                    className="w-32"
-                  />
+                <div className="hidden dark:flex mt-8 flex-wrap gap-x-6 gap-y-4">
+                  {dark.edges.map(({ node }) => (
+                    <GatsbyImage
+                      key={node.name}
+                      image={getImage(node.childImageSharp)}
+                      alt={node.name}
+                      loading="eager"
+                      className="w-32"
+                    />
+                  ))}
+                </div>
+                <div className="flex mt-8 flex-wrap gap-x-6 gap-y-4 dark:hidden">
+                  {light.edges.map(({ node }) => (
+                    <GatsbyImage
+                      key={node.name}
+                      image={getImage(node.childImageSharp)}
+                      alt={node.name}
+                      loading="eager"
+                      className="w-32"
+                    />
+                  ))}
                 </div>
               </div>
             </div>
@@ -96,20 +95,7 @@ const Hero = () => {
               <Prose className="text-center text-sm font-semibold lg:text-left">
                 <p>Koristimo najmodernije alate</p>
               </Prose>
-              <ul className="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-x-4 gap-y-8 lg:mx-0 lg:justify-start">
-                {frameworks.map(({ node }, i) => (
-                  <li
-                    key={i}
-                    className="h-16 w-16 flex items-center justify-center"
-                  >
-                    <GatsbyImage
-                      image={getImage(node.logo)}
-                      alt={node.label}
-                      className="max-w-full h-auto"
-                    />
-                  </li>
-                ))}
-              </ul>
+            <FrameWorksIcons />
             </div>
           </div>
         </Container>
